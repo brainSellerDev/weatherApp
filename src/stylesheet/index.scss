@@ -15,8 +15,7 @@ body {
 	align-items: center;
 	.weather-app-left-aside {
 		width: 40%;
-		height: 41.625rem;
-		padding: 3rem 0 5.25rem 2rem;
+		padding: 3rem 0.75rem 5.25rem 2rem;
 		background-size: cover;
 		background-image: url('../assets/images/left-side-image.png');
 		color: #fff;
@@ -54,11 +53,12 @@ body {
 		.weather-app-left-aside-current-day-forecast {
 			&__icon {
 				margin-top: 12.5rem;
-				width: 5.938rem;
-				height: 5.938rem;
+				width: 5.4rem;
+				height: 5.4rem;
 				display: block;
-				background-image: url('../assets/images/Sunsun-ico.png');
+				// background-image: url('../assets/images/Sunsun-ico.png');
 				margin-bottom: 0.625rem;
+                background-size: cover;
 			}
 			&__temperature {
 				font-size: 3.125rem;

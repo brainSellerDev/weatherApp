@@ -13,39 +13,39 @@
 		<link rel="stylesheet" href="../build/reset.css" />
 		<link rel="stylesheet" href="../build/index.css" />
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-		<script src="../scripts/index.js"></script>
+		<script src="../scripts/index.js" defer></script>
 		<title>Weather</title>
 	</head>
 
 	<body>
         <main class="weather-app-container">
             <aside class="weather-app-left-aside">
-                <h1 class="weather-app-left-aside__title">Weekday</h1>
-                <p class="weather-app-left-aside__date">20 June 2023</p>
+                <h1 class="weather-app-left-aside__title"></h1>
+                <p class="weather-app-left-aside__date"></p>
                 <div class="weather-app-left-aside-geolocation-info">
                     <span class="weather-app-left-aside-geolocation-info__icon">
                         <img src="../assets/icons/location.svg" alt="location">
                     </span>
-                    <p class="weather-app-left-aside-geolocation-info__city">New-York</p>
+                    <p class="weather-app-left-aside-geolocation-info__city"></p>
                 </div>
                 <div class="weather-app-left-aside-current-day-forecast">
                     <span class="weather-app-left-aside-current-day-forecast__icon"></span>
-                    <p class="weather-app-left-aside-current-day-forecast__temperature">29 °C</p>
-                    <p class="weather-app-left-aside-current-day-forecast__condition">Sunny</p>
+                    <p class="weather-app-left-aside-current-day-forecast__temperature"></p>
+                    <p class="weather-app-left-aside-current-day-forecast__condition"></p>
                 </div>
             </aside>
             <aside class="weather-app-right-aside">
                 <div class="weather-app-right-aside-info precipitation">
                     <p class="weather-app-right-aside-info__description">PRECIPITATION</p>
-                    <p class="weather-app-right-aside-info__value">0%</p>
+                    <p class="weather-app-right-aside-info__value precipitation-value"></p>
                 </div>
                 <div class="weather-app-right-aside-info humidity">
                     <p class="weather-app-right-aside-info__description">HUMIDITY</p>
-                    <p class="weather-app-right-aside-info__value">42%</p>
+                    <p class="weather-app-right-aside-info__value humidity-value"></p>
                 </div>
                 <div class="weather-app-right-aside-info wind">
                     <p class="weather-app-right-aside-info__description">WIND</p>
-                    <p class="weather-app-right-aside-info__value">3 km/h</p>
+                    <p class="weather-app-right-aside-info__value wind-value"></p>
                 </div>
                 <div class="weather-app-right-aside-several-days-forecast">
                     <button class="weather-app-right-aside-several-days-forecast-day-btn" autofocus>
@@ -53,7 +53,7 @@
                         <p class="weather-app-right-aside-several-days-forecast-day-btn__weekday">Tue</p>
                         <p class="weather-app-right-aside-several-days-forecast-day-btn__temperature">30 °C</p>
                     </button>
-                    <button class="weather-app-right-aside-several-days-forecast-day-btn">
+                    <!-- <button class="weather-app-right-aside-several-days-forecast-day-btn">
                         <span class="weather-app-right-aside-several-days-forecast-day-btn__icon"></span>
                         <p class="weather-app-right-aside-several-days-forecast-day-btn__weekday">Tue</p>
                         <p class="weather-app-right-aside-several-days-forecast-day-btn__temperature">30 °C</p>
@@ -77,7 +77,7 @@
                         <span class="weather-app-right-aside-several-days-forecast-day-btn__icon"></span>
                         <p class="weather-app-right-aside-several-days-forecast-day-btn__weekday">Tue</p>
                         <p class="weather-app-right-aside-several-days-forecast-day-btn__temperature">30 °C</p>
-                    </button>
+                    </button> -->
                 </div>
                 <button class="weather-app-right-aside-button">
                     <span class="weather-app-right-aside-button__icon">
