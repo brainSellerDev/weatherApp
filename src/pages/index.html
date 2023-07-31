@@ -18,74 +18,82 @@
 	</head>
 
 	<body>
-        <main class="weather-app-container">
-            <aside class="weather-app-left-aside">
-                <h1 class="weather-app-left-aside__title"></h1>
-                <p class="weather-app-left-aside__date"></p>
-                <div class="weather-app-left-aside-geolocation-info">
-                    <span class="weather-app-left-aside-geolocation-info__icon">
-                        <img src="../assets/icons/location.svg" alt="location">
-                    </span>
-                    <p class="weather-app-left-aside-geolocation-info__city"></p>
-                </div>
-                <div class="weather-app-left-aside-current-day-forecast">
-                    <span class="weather-app-left-aside-current-day-forecast__icon"></span>
-                    <p class="weather-app-left-aside-current-day-forecast__temperature"></p>
-                    <p class="weather-app-left-aside-current-day-forecast__condition"></p>
-                </div>
-            </aside>
-            <aside class="weather-app-right-aside">
-                <div class="weather-app-right-aside-info precipitation">
-                    <p class="weather-app-right-aside-info__description">PRECIPITATION</p>
-                    <p class="weather-app-right-aside-info__value precipitation-value"></p>
-                </div>
-                <div class="weather-app-right-aside-info humidity">
-                    <p class="weather-app-right-aside-info__description">HUMIDITY</p>
-                    <p class="weather-app-right-aside-info__value humidity-value"></p>
-                </div>
-                <div class="weather-app-right-aside-info wind">
-                    <p class="weather-app-right-aside-info__description">WIND</p>
-                    <p class="weather-app-right-aside-info__value wind-value"></p>
-                </div>
-                <div class="weather-app-right-aside-several-days-forecast">
-                    <button class="weather-app-right-aside-several-days-forecast-day-btn" autofocus>
-                        <span class="weather-app-right-aside-several-days-forecast-day-btn__icon"></span>
-                        <p class="weather-app-right-aside-several-days-forecast-day-btn__weekday">Tue</p>
-                        <p class="weather-app-right-aside-several-days-forecast-day-btn__temperature">30 °C</p>
-                    </button>
-                    <!-- <button class="weather-app-right-aside-several-days-forecast-day-btn">
-                        <span class="weather-app-right-aside-several-days-forecast-day-btn__icon"></span>
-                        <p class="weather-app-right-aside-several-days-forecast-day-btn__weekday">Tue</p>
-                        <p class="weather-app-right-aside-several-days-forecast-day-btn__temperature">30 °C</p>
-                    </button>
-                    <button class="weather-app-right-aside-several-days-forecast-day-btn">
-                        <span class="weather-app-right-aside-several-days-forecast-day-btn__icon"></span>
-                        <p class="weather-app-right-aside-several-days-forecast-day-btn__weekday">Tue</p>
-                        <p class="weather-app-right-aside-several-days-forecast-day-btn__temperature">30 °C</p>
-                    </button>
-                    <button class="weather-app-right-aside-several-days-forecast-day-btn">
-                        <span class="weather-app-right-aside-several-days-forecast-day-btn__icon"></span>
-                        <p class="weather-app-right-aside-several-days-forecast-day-btn__weekday">Tue</p>
-                        <p class="weather-app-right-aside-several-days-forecast-day-btn__temperature">30 °C</p>
-                    </button>
-                    <button class="weather-app-right-aside-several-days-forecast-day-btn">
-                        <span class="weather-app-right-aside-several-days-forecast-day-btn__icon"></span>
-                        <p class="weather-app-right-aside-several-days-forecast-day-btn__weekday">Tue</p>
-                        <p class="weather-app-right-aside-several-days-forecast-day-btn__temperature">30 °C</p>
-                    </button>
-                    <button class="weather-app-right-aside-several-days-forecast-day-btn">
+		<main class="weather-app-container">
+			<aside class="weather-app-left-aside">
+				<h1 class="weather-app-left-aside__title"></h1>
+				<span class="weather-app-left-aside__time"></span>
+				<p class="weather-app-left-aside__date"></p>
+				<div class="weather-app-left-aside-geolocation-info">
+					<span class="weather-app-left-aside-geolocation-info__icon">
+						<img src="../assets/icons/location.svg" alt="location" />
+					</span>
+					<p class="weather-app-left-aside-geolocation-info__city"></p>
+				</div>
+				<div class="weather-app-left-aside-current-day-forecast">
+					<span
+						class="weather-app-left-aside-current-day-forecast__icon"
+					></span>
+					<p
+						class="weather-app-left-aside-current-day-forecast__temperature"
+					></p>
+					<p class="weather-app-left-aside-current-day-forecast__condition"></p>
+				</div>
+			</aside>
+			<aside class="weather-app-right-aside">
+				<div class="weather-app-right-aside-info precipitation">
+					<p class="weather-app-right-aside-info__description">
+						Атмосферные Осадки
+					</p>
+					<p
+						class="weather-app-right-aside-info__value precipitation-value"
+					></p>
+				</div>
+				<div class="weather-app-right-aside-info humidity">
+					<p class="weather-app-right-aside-info__description">Влажность</p>
+					<p class="weather-app-right-aside-info__value humidity-value"></p>
+				</div>
+				<div class="weather-app-right-aside-info wind">
+					<p class="weather-app-right-aside-info__description">Ветер</p>
+					<p class="weather-app-right-aside-info__value wind-value"></p>
+				</div>
+				<div class="weather-app-right-aside-several-days-forecast">
+					<!-- <button class="weather-app-right-aside-several-days-forecast-day-btn" autofocus>
                         <span class="weather-app-right-aside-several-days-forecast-day-btn__icon"></span>
                         <p class="weather-app-right-aside-several-days-forecast-day-btn__weekday">Tue</p>
                         <p class="weather-app-right-aside-several-days-forecast-day-btn__temperature">30 °C</p>
                     </button> -->
-                </div>
-                <button class="weather-app-right-aside-button">
-                    <span class="weather-app-right-aside-button__icon">
-                        <img src="../assets/icons/location.svg" alt="location-ico">
-                    </span>
-                    <p class="weather-app-right-aside-button__description">Change Location</p>
-                </button>
-            </aside>
-        </main>
-    </body>
+				</div>
+				<button class="weather-app-right-aside-button">
+					<span class="weather-app-right-aside-button__icon">
+						<img src="../assets/icons/location.svg" alt="location-ico" />
+					</span>
+					<p class="weather-app-right-aside-button__description">
+						Изменить геолокацию
+					</p>
+				</button>
+			</aside>
+		</main>
+		<div class="popup">
+			<div class="popup__body" data-type="popup-close-body">
+				<div class="popup__content">
+					<input
+						type="text"
+						placeholder="Введите город"
+						class="popup__search"
+					/>
+					<button class="popup__btn" data-type="popup-close-body">
+						Изменить
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="loader">
+			<div class="lds-ellipsis">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</body>
 </html>

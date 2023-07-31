@@ -6,6 +6,8 @@ body {
 		rgba(218, 215, 215, 1) 0%,
 		rgba(13, 102, 207, 1) 100%
 	);
+	scrollbar-color: #94c9eb #714826;
+	scrollbar-width: thin;
 }
 
 .weather-app-container {
@@ -27,6 +29,10 @@ body {
 			font-weight: 700;
 			line-height: normal;
 			margin-bottom: 1rem;
+		}
+		&__time {
+			display: block;
+			margin-bottom: 0.625rem;
 		}
 		&__date {
 			font-size: 1.375rem;
@@ -58,7 +64,7 @@ body {
 				display: block;
 				// background-image: url('../assets/images/Sunsun-ico.png');
 				margin-bottom: 0.625rem;
-                background-size: cover;
+				background-size: cover;
 			}
 			&__temperature {
 				font-size: 3.125rem;
@@ -102,8 +108,7 @@ body {
 		}
 		.weather-app-right-aside-several-days-forecast {
 			display: flex;
-			justify-content: space-between;
-			flex-wrap: wrap;
+			column-gap: 0.875rem;
 			align-items: center;
 			.weather-app-right-aside-several-days-forecast-day-btn {
 				cursor: pointer;
@@ -136,7 +141,7 @@ body {
 					line-height: normal;
 				}
 				&__temperature {
-					font-size: 1.25rem;
+					font-size: 1.08rem;
 					font-style: normal;
 					font-weight: 700;
 					line-height: normal;
@@ -194,3 +199,120 @@ body {
 		}
 	}
 }
+
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($color: #000000, $alpha: 0.8);
+	top: 0;
+	left: 0;
+	display: none;
+	&__body {
+		min-height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 1.25rem 0.625rem;
+		.popup__content {
+			display: flex;
+			.popup__search {
+				width: 31.25rem;
+				padding: 0.938rem;
+				outline: none;
+				font-size: 1rem;
+			}
+			.popup__btn {
+				cursor: pointer;
+				border: none;
+				outline: none;
+				background-image: linear-gradient(
+					to right,
+					#314755 0%,
+					#26a0da 51%,
+					#314755 100%
+				);
+				padding: 0.938rem 2.813rem;
+				text-align: center;
+				text-transform: uppercase;
+				transition: 0.5s;
+				background-size: 200% auto;
+				color: white;
+				display: block;
+				&:hover {
+					background-position: right center; /* change the direction of the change here */
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+.loader{
+    position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($color: #000000, $alpha: 0.8);
+	top: 0;
+	left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lds-ellipsis {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0);
+  }
+  .lds-ellipsis div:nth-child(1) {
+    left: 8px;
+    animation: lds-ellipsis1 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(2) {
+    left: 8px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(3) {
+    left: 32px;
+    animation: lds-ellipsis2 0.6s infinite;
+  }
+  .lds-ellipsis div:nth-child(4) {
+    left: 56px;
+    animation: lds-ellipsis3 0.6s infinite;
+  }
+  @keyframes lds-ellipsis1 {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes lds-ellipsis3 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0);
+    }
+  }
+  @keyframes lds-ellipsis2 {
+    0% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(24px, 0);
+    }
+  }
+  
