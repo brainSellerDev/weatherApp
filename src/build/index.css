@@ -1,0 +1,179 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: rgb(218, 215, 215);
+  background: radial-gradient(circle, rgb(218, 215, 215) 0%, rgb(13, 102, 207) 100%);
+}
+
+.weather-app-container {
+  display: flex;
+  margin: 25rem auto;
+  width: 80%;
+  align-items: center;
+}
+.weather-app-container .weather-app-left-aside {
+  width: 40%;
+  height: 41.625rem;
+  padding: 3rem 0 5.25rem 2rem;
+  background-size: cover;
+  background-image: url("../assets/images/left-side-image.png");
+  color: #fff;
+  font-family: Montserrat;
+  border-radius: 1.875rem;
+}
+.weather-app-container .weather-app-left-aside__title {
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+.weather-app-container .weather-app-left-aside__date {
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 0.625rem;
+}
+.weather-app-container .weather-app-left-aside .weather-app-left-aside-geolocation-info {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.weather-app-container .weather-app-left-aside .weather-app-left-aside-geolocation-info__icon {
+  width: 1.688rem;
+  height: 1.688rem;
+}
+.weather-app-container .weather-app-left-aside .weather-app-left-aside-geolocation-info__city {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.weather-app-container .weather-app-left-aside .weather-app-left-aside-current-day-forecast__icon {
+  margin-top: 12.5rem;
+  width: 5.938rem;
+  height: 5.938rem;
+  display: block;
+  background-image: url("../assets/images/Sunsun-ico.png");
+  margin-bottom: 0.625rem;
+}
+.weather-app-container .weather-app-left-aside .weather-app-left-aside-current-day-forecast__temperature {
+  font-size: 3.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-bottom: 0.813rem;
+}
+.weather-app-container .weather-app-left-aside .weather-app-left-aside-current-day-forecast__condition {
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.weather-app-container .weather-app-right-aside {
+  width: 60%;
+  border-radius: 0 1.563rem 1.563rem 0;
+  background: #222831;
+  padding: 3.438rem 3.125rem 3.875rem 3.438rem;
+  font-family: Montserrat;
+}
+.weather-app-container .weather-app-right-aside .weather-app-right-aside-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.weather-app-container .weather-app-right-aside .weather-app-right-aside-info__description {
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.weather-app-container .weather-app-right-aside .weather-app-right-aside-info__value {
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.weather-app-container .weather-app-right-aside .weather-app-right-aside-several-days-forecast {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.weather-app-container .weather-app-right-aside .weather-app-right-aside-several-days-forecast .weather-app-right-aside-several-days-forecast-day-btn {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.938rem;
+  width: 15%;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.825rem;
+  box-shadow: 1px 0.125rem 0.25rem 0 #222831;
+  border: none;
+  outline: none;
+  background: #272e37;
+  color: #fff;
+  margin-bottom: 4.375rem;
+}
+.weather-app-container .weather-app-right-aside .weather-app-right-aside-several-days-forecast .weather-app-right-aside-several-days-forecast-day-btn__icon {
+  width: 3.438rem;
+  height: 3.438rem;
+  display: block;
+  background-image: url("../assets/images/Sunsun-ico.png");
+  background-size: cover;
+}
+.weather-app-container .weather-app-right-aside .weather-app-right-aside-several-days-forecast .weather-app-right-aside-several-days-forecast-day-btn__weekday {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.weather-app-container .weather-app-right-aside .weather-app-right-aside-several-days-forecast .weather-app-right-aside-several-days-forecast-day-btn__temperature {
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.weather-app-container .weather-app-right-aside .weather-app-right-aside-several-days-forecast .weather-app-right-aside-several-days-forecast-day-btn:focus {
+  background-color: #94c9eb;
+  color: #fff;
+}
+.weather-app-container .weather-app-right-aside .weather-app-right-aside-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  justify-content: center;
+  background-image: linear-gradient(to right, #77a1d3 0%, #79cbca 51%, #77a1d3 100%);
+  margin: 0.625rem;
+  padding: 0.938rem 2.813rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  border-radius: 0.625rem;
+  width: 100%;
+}
+.weather-app-container .weather-app-right-aside .weather-app-right-aside-button__icon {
+  width: 2.063rem;
+  height: 2.063rem;
+}
+.weather-app-container .weather-app-right-aside .weather-app-right-aside-button__description {
+  color: white;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.weather-app-container .weather-app-right-aside .weather-app-right-aside-button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=index.css.map */
