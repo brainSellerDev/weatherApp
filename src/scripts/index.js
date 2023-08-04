@@ -143,7 +143,7 @@ changeLocationField.addEventListener('input', event => {
 	searchCityField = event.target.value
 })
 
-popupChangeBtn.addEventListener('click', async => {
+popupChangeBtn.addEventListener('click', () => {
 	if (searchCityField.length) {
 		clearText()
 		render()
@@ -191,12 +191,14 @@ async function getSeveralDaysForecast(city, days) {
 async function update() {
 	try {
 		setLoadingStatus(true)
+		const ipAddressResponse = await getIpAddress()
 		const { ip } = await getIpAddress()
 		const { city } = await getCityByIp(ip)
 		searchCityField
 			? (cityWeatherForecast = searchCityField)
 			: (cityWeatherForecast = city)
 		todayWeatherForecast = await getCurrentCityForecast(cityWeatherForecast)
+		const forecastResponse = await getSeveralDaysForecast(cityWeatherForecast, 7)
 		const { forecast } = await getSeveralDaysForecast(cityWeatherForecast, 6)
 		severalDaysForecast = [...forecast.forecastday]
 	} catch (e) {
