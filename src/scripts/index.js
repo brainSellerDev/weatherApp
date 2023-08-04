@@ -151,7 +151,7 @@ popupChangeBtn.addEventListener('click', async => {
 	}
 })
 
-function getLoadingStatus(status) {
+function setLoadingStatus(status) {
 	return status
 		? (loader.style.display = 'flex')
 		: (loader.style.display = 'none')
@@ -168,9 +168,9 @@ async function getIpAddress() {
 	).data
 }
 
-async function getCityByIp(ipAdress) {
+async function getCityByIp(ipAddress) {
 	return await (
-		await axios(`${configData.URL}/ip.json?q=${ipAdress}&key=${configData.WEATHER_API_KEY}&lang=ru`)
+		await axios(`${configData.URL}/ip.json?q=${ipAddress}&key=${configData.WEATHER_API_KEY}&lang=ru`)
 	).data
 }
 
@@ -190,7 +190,7 @@ async function getSeveralDaysForecast(city, days) {
 
 async function update() {
 	try {
-		getLoadingStatus(true)
+		setLoadingStatus(true)
 		const { ip } = await getIpAddress()
 		const { city } = await getCityByIp(ip)
 		searchCityField
@@ -202,7 +202,7 @@ async function update() {
 	} catch (e) {
 		throw e
 	}finally{
-		getLoadingStatus(false)
+		setLoadingStatus(false)
 	}
 }
 
